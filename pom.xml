@@ -7,10 +7,65 @@
     <groupId>com.zonaacme</groupId>
     <artifactId>zonaacme</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <packaging>jar</packaging>
+
+    <name>SICA - Sistema Integrado de Control de Acceso</name>
+    <description>Control de acceso para el complejo empresarial Zona Acme</description>
 
     <properties>
-        <maven.compiler.source>17</maven.compiler.source>
-        <maven.compiler.target>17</maven.compiler.target>
+        <!-- Version de Java: release reemplaza a source + target -->
+        <maven.compiler.release>21</maven.compiler.release>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+        <!-- Versiones centralizadas: se cambian en un solo lugar -->
+        <javafx.version>21.0.5</javafx.version>
+        <mysql.version>9.2.0</mysql.version>
+
+        <!-- Clase que arranca la aplicacion -->
+        <main.class>com.zonaacme.Main</main.class>
     </properties>
 
+    <dependencies>
+        <!-- JavaFX: controles graficos (botones, tablas, campos de texto...) -->
+        <dependency>
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-controls</artifactId>
+            <version>${javafx.version}</version>
+        </dependency>
+
+        <!-- JavaFX: carga de pantallas desde archivos .fxml -->
+        <dependency>
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-fxml</artifactId>
+            <version>${javafx.version}</version>
+        </dependency>
+
+        <!-- Driver JDBC de MySQL (igual que en el tema 3.15.5 de la guia) -->
+        <dependency>
+            <groupId>com.mysql</groupId>
+            <artifactId>mysql-connector-j</artifactId>
+            <version>${mysql.version}</version>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <!-- Compilador de Java -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.13.0</version>
+            </plugin>
+
+            <!-- Permite ejecutar la app con:  mvn javafx:run -->
+            <plugin>
+                <groupId>org.openjfx</groupId>
+                <artifactId>javafx-maven-plugin</artifactId>
+                <version>0.0.8</version>
+                <configuration>
+                    <mainClass>${main.class}</mainClass>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 </project>

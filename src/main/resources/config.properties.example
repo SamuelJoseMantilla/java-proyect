@@ -1,0 +1,19 @@
+# =====================================================================
+#  SICA - Configuracion de la aplicacion (PLANTILLA)
+#  1. Copie este archivo como  config.properties  (Git lo ignora)
+#  2. Ponga la misma clave que uso en database/users.local.sql
+# =====================================================================
+
+# ---------- Base de datos ----------
+# Puerto 3307: el contenedor mysql_db expone MySQL en ese puerto
+db.url=jdbc:mysql://localhost:3307/sica_db
+db.user=sica_app
+db.password=CAMBIAR_ESTA_CLAVE
+
+# ---------- Seguridad del login ----------
+seguridad.max.intentos=3
+seguridad.minutos.bloqueo=5
+
+# ---------- Tiempo real ----------
+# Cada cuantos segundos las pantallas consultan cambios en la BD
+app.refresco.segundos=3
