@@ -1,0 +1,26 @@
+# ===== Maven =====
+# Carpeta donde Maven deja lo compilado: se regenera con cada build
+target/
+
+# ===== Java =====
+*.class
+*.log
+*.jar
+!.mvn/wrapper/maven-wrapper.jar
+
+# ===== IDEs =====
+.vscode/
+.idea/
+*.iml
+.settings/
+.project
+.classpath
+bin/
+
+# ===== Sistema operativo =====
+Thumbs.db
+desktop.ini
+.DS_Store
+
+# ===== Herramientas locales (extension de VS Code) =====
+.github/modernize/
