@@ -22,5 +22,10 @@ Thumbs.db
 desktop.ini
 .DS_Store
 
+# ===== Credenciales locales (NUNCA se suben) =====
+# Se suben solo las plantillas: users.sql y config.properties.example
+database/users.local.sql
+src/main/resources/config.properties
+
 # ===== Herramientas locales (extension de VS Code) =====
 .github/modernize/
