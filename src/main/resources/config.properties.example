@@ -5,6 +5,8 @@
 # =====================================================================
 
 # ---------- Base de datos ----------
+# Motor que usara ConexionFactory (por ahora solo: mysql)
+db.motor=mysql
 # Puerto 3307: el contenedor mysql_db expone MySQL en ese puerto
 db.url=jdbc:mysql://localhost:3307/sica_db
 db.user=sica_app
