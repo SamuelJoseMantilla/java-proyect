@@ -1,0 +1,19 @@
+/* =====================================================================
+   SICA - Estilos globales de la aplicacion
+   ===================================================================== */
+
+.root {
+    -fx-font-family: "Segoe UI", sans-serif;
+    -fx-font-size: 14px;
+    -fx-background-color: #0f172a;   /* azul oscuro */
+}
+
+.label {
+    -fx-text-fill: #cbd5e1;
+}
+
+.titulo {
+    -fx-font-size: 28px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #38bdf8;          /* azul claro */
+}
